@@ -4,15 +4,21 @@ project(LUE_CONSUME
     VERSION 0.3.8
     LANGUAGES CXX)
 
+cmake_policy(SET CMP0144 NEW)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
 include(FetchContent)
 
 FetchContent_Declare(lue
+    # TODO Uncomment once install logic is merged into LUE's master branch
     # GIT_REPOSITORY https://github.com/computationalgeography/lue.git
     GIT_REPOSITORY file://$ENV{HOME}/development/project/github/computational_geography/lue
     GIT_TAG gh446  # TODO Update to master branch
     SYSTEM
-    FIND_PACKAGE_ARGS
+    FIND_PACKAGE_ARGS 0.3.8
 )
 FetchContent_MakeAvailable(lue)
 
@@ -33,5 +39,7 @@ add_executable(lue_consume_framework
 
 target_link_libraries(lue_consume_framework
     PRIVATE
-        lue::framework_algorithm
+        lue::framework_focal_operation
+        lue::framework_local_operation
+        HPX::wrap_main
 )
