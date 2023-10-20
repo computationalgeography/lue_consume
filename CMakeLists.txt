@@ -13,9 +13,8 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 include(FetchContent)
 
 FetchContent_Declare(lue
-    # TODO Uncomment once install logic is merged into LUE's master branch
-    # GIT_REPOSITORY https://github.com/computationalgeography/lue.git
-    GIT_REPOSITORY file://$ENV{HOME}/development/project/github/computational_geography/lue
+    GIT_REPOSITORY https://github.com/computationalgeography/lue.git
+    # GIT_REPOSITORY file://$ENV{HOME}/development/project/github/computational_geography/lue
     GIT_TAG gh446  # TODO Update to master branch
     SYSTEM
     FIND_PACKAGE_ARGS 0.3.8
