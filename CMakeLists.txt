@@ -15,7 +15,7 @@ include(FetchContent)
 FetchContent_Declare(lue
     GIT_REPOSITORY https://github.com/computationalgeography/lue.git
     # GIT_REPOSITORY file://$ENV{HOME}/development/project/github/computational_geography/lue
-    GIT_TAG gh446  # TODO Update to master branch
+    GIT_TAG master
     SYSTEM
     FIND_PACKAGE_ARGS 0.3.8
 )
