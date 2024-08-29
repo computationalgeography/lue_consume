@@ -24,6 +24,7 @@ FetchContent_Declare(lue
     # GIT_REPOSITORY file://$ENV{HOME}/development/project/github/computational_geography/lue
     GIT_TAG master
     SYSTEM
+    FIND_PACKAGE_ARGS
 )
 FetchContent_MakeAvailable(lue)
 
