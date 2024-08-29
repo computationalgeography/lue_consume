@@ -1,10 +1,8 @@
 cmake_minimum_required(
     VERSION 3.26)
 project(LUE_CONSUME
-    VERSION 0.3.8
+    VERSION 0.0.0
     LANGUAGES CXX)
-
-cmake_policy(SET CMP0144 NEW)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
@@ -26,7 +24,6 @@ FetchContent_Declare(lue
     # GIT_REPOSITORY file://$ENV{HOME}/development/project/github/computational_geography/lue
     GIT_TAG master
     SYSTEM
-    FIND_PACKAGE_ARGS 0.3.8
 )
 FetchContent_MakeAvailable(lue)
 
