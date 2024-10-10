@@ -24,6 +24,8 @@ class FocalEvenOdd
 
     public:
 
+        static constexpr char const* name{"focal_even_odd"};
+
         using OutputElement = InputElement;
 
         template<typename Kernel, typename OutputPolicies, typename InputPolicies, typename Subspan>
