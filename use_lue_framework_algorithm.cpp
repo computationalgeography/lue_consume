@@ -1,9 +1,9 @@
 #include <lue/framework/algorithm/definition/focal_operation.hpp>
 #include <lue/framework/algorithm/serialize/kernel.hpp>
-#include "lue/framework/algorithm/value_policies/comparison.hpp"
-#include "lue/framework/algorithm/value_policies/logical_and.hpp"
-#include "lue/framework/algorithm/value_policies/uniform.hpp"
-#include "lue/framework/algorithm/value_policies/where.hpp"
+#include <lue/framework/algorithm/value_policies/comparison.hpp>
+#include <lue/framework/algorithm/value_policies/logical_and.hpp>
+#include <lue/framework/algorithm/value_policies/uniform.hpp>
+#include <lue/framework/algorithm/value_policies/where.hpp>
 #include <lue/framework/partitioned_array.hpp>
 #include <hpx/hpx_main.hpp>
 #include <cstdlib>
