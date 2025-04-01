@@ -8,7 +8,6 @@
 #include <hpx/hpx_main.hpp>
 #include <cstdlib>
 #include <iostream>
-#include <string>
 
 
 /*!
