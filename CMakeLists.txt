@@ -14,15 +14,6 @@ set(CMAKE_VISIBILITY_INLINES_HIDDEN TRUE)
 
 include(FetchContent)
 
-# LUE useѕ a recent version of FMT. Find FMT before finding LUE so LUE will find our FMT.
-FetchContent_Declare(fmt
-    GIT_REPOSITORY https://github.com/fmtlib/fmt.git
-    GIT_TAG e69e5f977d458f2650bb346dadf2ad30c5320281  # 10.2.1
-    SYSTEM
-    FIND_PACKAGE_ARGS 10
-)
-FetchContent_MakeAvailable(fmt)
-
 FetchContent_Declare(lue
     GIT_REPOSITORY https://github.com/computationalgeography/lue.git
     # GIT_REPOSITORY file://$ENV{HOME}/development/project/github/computational_geography/lue
