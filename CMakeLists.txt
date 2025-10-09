@@ -14,14 +14,7 @@ set(CMAKE_VISIBILITY_INLINES_HIDDEN TRUE)
 
 include(FetchContent)
 
-FetchContent_Declare(lue
-    GIT_REPOSITORY https://github.com/computationalgeography/lue.git
-    # GIT_REPOSITORY file://$ENV{HOME}/development/project/github/computational_geography/lue
-    GIT_TAG master
-    SYSTEM
-    FIND_PACKAGE_ARGS
-)
-FetchContent_MakeAvailable(lue)
+find_package(lue)
 
 
 add_executable(lue_consume_data_model
