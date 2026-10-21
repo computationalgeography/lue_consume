@@ -1,18 +1,19 @@
+#include <hpx/hpx_main.hpp>
+#include <cstdlib>
+#include <iostream>
 #include <lue/framework/algorithm/value_policies/all.hpp>
 #include <lue/framework/algorithm/value_policies/comparison.hpp>
 #include <lue/framework/algorithm/value_policies/uniform.hpp>
 #include <lue/framework/io.hpp>
 #include <lue/gdal.hpp>
-#include <hpx/hpx_main.hpp>
-#include <cstdlib>
-#include <iostream>
 
 
 int main([[maybe_unused]] int const argc, [[maybe_unused]] char** argv)
 {
     int status{EXIT_FAILURE};
 
-    try {
+    try
+    {
         // Select operations that use certain policies
         using namespace lue::value_policies;
 
@@ -46,7 +47,7 @@ int main([[maybe_unused]] int const argc, [[maybe_unused]] char** argv)
         // Compare arrays
         auto rasters_are_equal = all(output_array == input_array);
 
-        if(rasters_are_equal.future().get())
+        if (rasters_are_equal.future().get())
         {
             std::cout << "→ Raster read is EQUAL to raster written\n";
             status = EXIT_SUCCESS;
@@ -56,7 +57,7 @@ int main([[maybe_unused]] int const argc, [[maybe_unused]] char** argv)
             std::cout << "→ Raster read is NOT EQUAL to raster written\n";
         }
     }
-    catch(std::exception const& exception)
+    catch (std::exception const& exception)
     {
         std::cerr << exception.what() << std::endl;
     }

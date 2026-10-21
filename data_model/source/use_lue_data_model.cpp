@@ -1,7 +1,7 @@
-#include <lue/data_model.hpp>
-#include <lue/validate.hpp>
 #include <cstdlib>
 #include <iostream>
+#include <lue/data_model.hpp>
+#include <lue/validate.hpp>
 #include <string>
 
 
@@ -9,7 +9,8 @@ int main([[maybe_unused]] int const argc, [[maybe_unused]] char** argv)
 {
     int status{EXIT_FAILURE};
 
-    try {
+    try
+    {
         std::string const pathname{"lue_consume_test_file.lue"};
 
         // Create a dataset
@@ -36,7 +37,7 @@ int main([[maybe_unused]] int const argc, [[maybe_unused]] char** argv)
 
         status = EXIT_SUCCESS;
     }
-    catch(std::exception const& exception)
+    catch (std::exception const& exception)
     {
         std::cerr << exception.what() << std::endl;
     }
