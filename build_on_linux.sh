@@ -14,13 +14,16 @@ set -eu
 # ${build_directory1}/lue_consume_data_model
 # ${build_directory1}/lue_consume_framework
 
-build_type=Debug
+build_type=RelWithDebInfo
 
 # Consume LUE after installing it (and HPX and MDSpan) somewhere
-build_directory2=~/tmp/lue_consume_build2
+build_directory2=~/tmp/lue_consume_build
 lue_install_prefix=~/tmp/lue-dev
-hpx_install_prefix=~/development/opt/$build_type/hpx
-mdspan_install_prefix=~/development/opt/$build_type/mdspan
+hpx_install_prefix=$OBJECTS/../opt/$build_type/hpx
+mdspan_install_prefix=$OBJECTS/../opt/$build_type/mdspan
+
+# cmake --install ${lue_build_prefix} --prefix ${lue_install_prefix} --component lue_runtime --strip
+# cmake --install ${lue_build_prefix} --prefix ${lue_install_prefix} --component lue_development --strip
 
 cmake \
     -B ${build_directory2} \
